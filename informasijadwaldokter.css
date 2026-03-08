@@ -1,0 +1,208 @@
+/* CSS ULTRA-VIBRANT MODERN - KLINIK SEHAT UMAT 
+   Konsep: Colorful Medical, Soft Gradients & High Interaction
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+:root {
+    --primary-grad: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); /* Indigo to Purple */
+    --secondary-grad: linear-gradient(135deg, #0ea5e9 0%, #22d3ee 100%); /* Cyan to Sky Blue */
+    --accent-grad: linear-gradient(135deg, #f43f5e 0%, #fb923c 100%); /* Rose to Orange */
+    --bg-light: #fdfeff;
+    --white: #ffffff;
+    --text-dark: #1e1b4b;
+    --text-muted: #64748b;
+    --shadow-color: rgba(99, 102, 241, 0.1);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #f0f4ff;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(244, 63, 94, 0.1) 0%, transparent 20%);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 40px;
+    border: 1px solid var(--white);
+    box-shadow: 0 25px 50px -12px var(--shadow-color);
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 5px solid var(--white);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 30px;
+    background: var(--primary-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+/* --- TABLE (WARNA-WARNI) --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+th {
+    padding: 10px 20px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+td {
+    background: var(--white);
+    padding: 22px;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+td:first-child { border-radius: 20px 0 0 20px; border-left: 4px solid #6366f1; }
+td:last-child { border-radius: 0 20px 20px 0; color: #a855f7; }
+
+tr:hover td {
+    transform: scale(1.02) translateX(10px);
+    background: #f8faff;
+    box-shadow: 0 10px 15px -3px var(--shadow-color);
+}
+
+/* --- TOMBOL LAYANAN (GLOWING) --- */
+.btn-resmi {
+    display: inline-block;
+    padding: 16px 35px;
+    background: var(--accent-grad);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3);
+    transition: 0.3s;
+    margin-bottom: 40px;
+}
+
+.btn-resmi:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(244, 63, 94, 0.4);
+}
+
+/* --- UNIT LAYANAN (CARD BERWARNA) --- */
+.daftar_Unit ul, .daftar_unit ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none !important;
+}
+
+.daftar_Unit li, .daftar_unit li {
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 800;
+    color: white;
+    background: var(--secondary-grad);
+    box-shadow: 0 10px 15px rgba(14, 165, 233, 0.2);
+    transition: 0.4s;
+}
+
+/* Variasi Warna Tiap Kartu */
+.daftar_Unit li:nth-child(2n), .daftar_unit li:nth-child(2n) { background: var(--primary-grad); }
+.daftar_Unit li:nth-child(3n), .daftar_unit li:nth-child(3n) { background: var(--accent-grad); }
+
+.daftar_Unit li:hover, .daftar_unit li:hover {
+    transform: translateY(-10px) rotate(2deg);
+    filter: brightness(1.1);
+}
+
+/* --- FORM SECTION (CLEAN & VIBRANT) --- */
+.form-section {
+    background: #f8fafc;
+    padding: 40px;
+    border-radius: 30px;
+    border: 2px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 5px; height: 100%;
+    background: var(--primary-grad);
+}
+
+.form-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.form-section input[type="text"] {
+    flex: 1;
+    min-width: 250px;
+    padding: 18px;
+    border: 2px solid #cbd5e1;
+    border-radius: 18px;
+    font-size: 1rem;
+    height: 60px;
+    box-sizing: border-box; /* */
+    transition: 0.3s;
+}
+
+.form-section input[type="text"]:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.form-section button {
+    height: 60px; /* */
+    padding: 0 40px;
+    background: var(--text-dark);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-section button:hover {
+    background: var(--primary-grad);
+    transform: scale(1.05);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .form-section form { flex-direction: column; align-items: stretch; }
+    .form-section input[type="text"], .form-section button { width: 100%; }
+}

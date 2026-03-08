@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap">
+    <link rel="stylesheet" href="informasijadwaldokter.css">
+    <title>Klinik Sehat Umat | Sistem Informasi Jadwal</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1000&auto=format&fit=crop" alt="Klinik Sehat Umat">
+            </div>
+            <h1>Klinik Sehat Umat</h1>
+            <p class="subtitle">Melayani dengan Hati, Mengabdi untuk Negeri</p>
+        </header>
+
+        <section class="content-section">
+            <div class="section-title">
+                <h2>Jadwal Praktik Dokter</h2>
+                <span class="badge">Minggu Ini</span>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Dokter</th>
+                            <th>Spesialisasi</th>
+                            <th>Jam Praktik</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td class="doctor-name">dr. Andi Pratama, Sp.A</td>
+                            <td><span class="tag pediatric">Anak</span></td>
+                            <td>08:00 — 12:00</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td class="doctor-name">dr. Ghandur Fauzan, Sp.PD</td>
+                            <td><span class="tag internal">Penyakit Dalam</span></td>
+                            <td>14:00 — 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td class="doctor-name">dr. Hisam, Sp.B</td>
+                            <td><span class="tag surgery">Bedah Umum</span></td>
+                            <td>18:00 — 21:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="#" class="btn-resmi">Lihat Prosedur Lengkap &rarr;</a>
+        </section>
+
+        <section class="content-section">
+            <h2>Unit Layanan & Poli Spesialis</h2>
+            <div class="daftar_Unit">
+                <ul>
+                    <li>
+                        <span class="icon">🏥</span>
+                        Poli Umum
+                    </li>
+                    <li>
+                        <span class="icon">👶</span>
+                        Poli Ibu & Anak
+                    </li>
+                    <li>
+                        <span class="icon">🚑</span>
+                        Layanan UGD 24 Jam
+                    </li>
+                    <li>
+                        <span class="icon">🔬</span>
+                        Laboratorium Klinik
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-header">
+                <h2>Pendaftaran Antrian Pasien</h2>
+                <p>Silakan masukkan nama untuk cek estimasi waktu tunggu.</p>
+            </div>
+            <form name="myForm" onsubmit="sambutUser(event)">
+                <div class="input-group">
+                    <label for="nama_input">Nama Lengkap Pasien</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="nama_input" name="nama" placeholder="Misal: Budi Santoso" required>
+                        <button type="submit">Cek Antrian</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2050 Klinik Sehat Umat. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="informasijadwaldokter.js"></script>
+</body>
+</html>
